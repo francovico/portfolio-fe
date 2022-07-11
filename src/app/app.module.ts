@@ -10,7 +10,8 @@ import { BannerComponent } from './banner/banner.component';
 import { AboutComponent } from './about/about.component';
 import { ExperienceComponent } from './experience/experience.component';
 import { EducationComponent } from './education/education.component';
-import { HassComponent } from './hass/hass.component'
+import { HassComponent } from './hass/hass.component';
+import { FooterComponent } from './footer/footer.component'
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { HassComponent } from './hass/hass.component'
     AboutComponent,
     ExperienceComponent,
     EducationComponent,
-    HassComponent
+    HassComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
