@@ -9,6 +9,8 @@ import { SocialComponent } from './social/social.component';
 import { BannerComponent } from './banner/banner.component';
 import { AboutComponent } from './about/about.component';
 import { ExperienceComponent } from './experience/experience.component';
+import { EducationComponent } from './education/education.component';
+import { HassComponent } from './hass/hass.component'
 
 @NgModule({
   declarations: [
@@ -18,11 +20,13 @@ import { ExperienceComponent } from './experience/experience.component';
     SocialComponent,
     BannerComponent,
     AboutComponent,
-    ExperienceComponent
+    ExperienceComponent,
+    EducationComponent,
+    HassComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
