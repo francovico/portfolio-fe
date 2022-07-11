@@ -1,6 +1,8 @@
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
+div {
+background-color: black;
+}
+
+app-social{
+    float: right;
+    margin-top: 25px;
 }
