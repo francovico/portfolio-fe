@@ -1,0 +1,20 @@
+.row{
+    padding: 20px;
+}
+
+img{
+    border: 0.5rem solid rgba(100, 100, 100, 0.1);
+}
+
+div{
+    background-color: #0E081A;
+    color:lavender;
+    text-align: center;
+}
+
+#nombre{
+    color:white;
+    font-weight: bold;
+    margin-top: 20%
+    
+}
