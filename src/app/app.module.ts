@@ -7,6 +7,7 @@ import { HeaderComponent } from './header/header.component';
 import { BotonAgregarComponent } from './boton-agregar/boton-agregar.component';
 import { LogoComponent } from './logo/logo.component';
 import { SocialComponent } from './social/social.component';
+import { BannerComponent } from './banner/banner.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { SocialComponent } from './social/social.component';
     HeaderComponent,
     BotonAgregarComponent,
     LogoComponent,
-    SocialComponent
+    SocialComponent,
+    BannerComponent
   ],
   imports: [
     BrowserModule,
