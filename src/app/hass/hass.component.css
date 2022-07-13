@@ -1,9 +1,12 @@
-.row{
-    padding: 50px;
-}
-
 div{
     background-color: #190F2D;
     color:lavender;
     text-align: left;
+    padding: 50px;
+    font-size: 20px;
+}
+
+.form-group{
+    padding: 50px;
+    max-height: 10px;
 }
