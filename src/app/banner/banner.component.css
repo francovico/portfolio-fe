@@ -1,6 +1,15 @@
+.bannertext {
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  margin-bottom: 25px;
+  text-align: center;
+  font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  color: #fff;
+}
+
 .bgimg {
     padding-top: 2rem;
-    padding-bottom: 16rem;
+    padding-bottom: 20rem;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -9,11 +18,11 @@
     animation-iteration-count: infinite;
   }
 
-  .bannertext {
-    font-size: 1.5rem;
-    line-height: 1.5rem;
-    margin-bottom: 25px;
-    text-align: center;
-    font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    color: #fff;
+  @keyframes image_blur {
+    0% { -webkit-filter: blur(0px);}
+    25% { -webkit-filter: blur(5px);}
+    50% { -webkit-filter: blur(1px);}
+    75% { -webkit-filter: blur(3px);}
+    100% { -webkit-filter: blur(0px);}
   }
+

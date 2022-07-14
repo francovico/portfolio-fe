@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { TokenService } from '../service/token.service';
 
 @Component({
   selector: 'app-header',
@@ -7,12 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  title:string = 'Portfolio';
-
   constructor() { }
 
   ngOnInit(): void {
   }
+
+  title:string = 'Portfolio';
 
   toggleAdd(){
     console.log("Agregado")

@@ -3,5 +3,8 @@
     <a class="btn btn-dark social" href="https://www.instagram.com/franco.vico/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
     <a class="btn btn-dark social" href="https://www.facebook.com/franco.vico" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
     <a class="btn btn-dark social" href="http://wa.me/+543492419700" aria-label="Whatsapp"><i class="fab fa-whatsapp"></i></a>
-    <a class="btn btn-dark social" href="/login" aria-label="Login">Login <i class="fa-solid fa-right-to-bracket"></i></a>
+    <!-- <a class="btn btn-dark social" href="/login" aria-label="Login">Login <i class="fa-solid fa-right-to-bracket"></i></a> -->
+    <a class="btn btn-dark social" href="/login" aria-label="Login" (click)="login()" *ngIf="!isLogged">Login <i class="fa-solid fa-right-to-bracket"></i></a>
+    <a class="btn btn-dark social" href="/login" aria-label="Login" (click)="onLogOut()" *ngIf="isLogged">Logout <i class="fa-solid fa-right-to-bracket"></i></a>
+
 </div>
