@@ -16,8 +16,8 @@
             <tr *ngFor="let Experiencia of expe">
                 <td>{{Experiencia.nombreexperiencia}}</td>
                 <td>{{Experiencia.descripcionexperiencia}}</td>
-                <td> <button class="btn btn-light" routerLink="/editarexperiencia/{{Experiencia.id}}"> <i class="fa-solid fa-pen-to-square"> </i> Editar </button> </td>
-                <td> <i class="fa-solid fa-trash"></i> Borrar </td>
+                <td *ngIf="isLogged"> <button class="btn btn-light" routerLink="/editarexperiencia/{{Experiencia.id}}"> <i class="fa-solid fa-pen-to-square"> </i> Editar </button> </td>
+                <td *ngIf="isLogged"> <button class="btn btn-light" (click)="delete(Experiencia.id)"> <i class="fa-solid fa-pen-to-square"> </i> Editar </button> </td>
             </tr>
         </tbody>
         </table>

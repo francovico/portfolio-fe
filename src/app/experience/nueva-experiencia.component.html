@@ -4,15 +4,15 @@
             <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
                 <div class="form-group">
                     <label for="nombreexperiencia">Empresa</label>
-                    <label type="text" class="form-control" id="nombreexperiencia" name="nombreexperiencia" [(ngModel)]="nombreexperiencia" requerid></label>
+                    <input type="text" class="form-control" id="nombreexperiencia" name="nombreexperiencia" [(ngModel)]="nombreexperiencia" requerid>
                 </div>
                 <div class="form-group">
                     <label for="descripcionexperiencia">Descripción</label>
-                    <label type="text" class="form-control" id="descripcionexperiencia" name="descripcionexperiencia" [(ngModel)]="descripcionexperiencia" requerid></label>
+                    <input type="text" class="form-control" id="descripcionexperiencia" name="descripcionexperiencia" [(ngModel)]="descripcionexperiencia" requerid>
                 </div>
                 <button class="btn btn-primary">
                 Agregar
-                </button>        
+                </button>
             </form>
         </div>
     </div>

@@ -7,7 +7,8 @@ import { Experiencia } from '../model/experiencia';
   providedIn: 'root'
 })
 export class ExperienciaservicioService {
-  expURL = 'http://localhost:8080/experiencia/'
+  expURL = 'http://localhost:8080/experiencia/';
+
   constructor(private httpClient: HttpClient) { }
 
   public lista(): Observable<Experiencia[]>{
@@ -15,7 +16,7 @@ export class ExperienciaservicioService {
   }
 
   public detail(id: number): Observable<Experiencia>{
-    return this.httpClient.get<Experiencia>(this.expURL + `detail/${id}`)
+    return this.httpClient.get<Experiencia>(this.expURL + `detail/${id}`);
   }
 
   public save(experiencia: Experiencia): Observable<any>{
@@ -27,6 +28,6 @@ export class ExperienciaservicioService {
   }
 
   public delete(id: number): Observable<any>{
-    return this.httpClient.delete<any>(this.expURL + `delete/${id}`)
+    return this.httpClient.delete<any>(this.expURL + `delete/${id}`);
   }
 }
