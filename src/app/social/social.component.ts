@@ -7,6 +7,7 @@ import { TokenService } from '../service/token.service';
   templateUrl: './social.component.html',
   styleUrls: ['./social.component.css']
 })
+
 export class SocialComponent implements OnInit {
   isLogged = false;
   constructor(private router:Router, private tokenService: TokenService) {}

@@ -16,6 +16,8 @@ import { FooterComponent } from './footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
+import { NuevaExperienciaComponent } from './experience/nueva-experiencia.component';
+import { EditarexperienciaComponent } from './experience/editarexperiencia.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +33,8 @@ import { LoginComponent } from './login/login.component';
     FooterComponent,
     HomeComponent,
     LoginComponent,
+    NuevaExperienciaComponent,
+    EditarexperienciaComponent,
   ],
   imports: [
     BrowserModule,
