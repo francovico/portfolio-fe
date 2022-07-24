@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row">
+      <div>
+          <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+              <div class="form-group">
+                  <label for="nombrehass">Nombre</label>
+                  <input type="text" class="form-control" id="nombrehass" name="nombrehass" [(ngModel)]="nombrehass" requerid>
+              </div>
+              <div class="form-group">
+                  <label for="puntuacionhass">Puntuacion</label>
+                  <input type="text" class="form-control" id="puntuacionhass" name="puntuacionhass" [(ngModel)]="puntuacionhass" requerid>
+              </div>
+              <button class="btn btn-primary">
+              Agregar
+              </button>
+          </form>
+      </div>
+  </div>
+</div>

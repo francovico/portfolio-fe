@@ -1,14 +1,11 @@
 div{
     background-color: #190F2D;
     color:lavender;
-    text-align: left;
-    padding: 50px;
+    padding: 15px;
     font-size: 20px;
 }
 
 .progress-bar{
-  text-align: center;
+  text-align: left;
   padding: 15px;
-  margin: 00px;
-  margin-bottom: 40px;
 }

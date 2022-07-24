@@ -1,0 +1,23 @@
+<section class="vh-100" style="background-color: #0E081A">
+
+  <div class="container" *ngIf="hass">
+      <div class="row">
+          <div>
+              <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                  <div class="form-group">
+                      <label for="nombrehass">Empresa</label>
+                      <input type="text" class="form-control" id="nombrehassa" name="nombrehass" [(ngModel)]="hass.nombrehass" requerid>
+                  </div>
+                  <div class="form-group">
+                      <label for="puntuacionhass">Descripción</label>
+                      <input type="text" class="form-control" id="puntuacionhass" name="puntuacionhassa" [(ngModel)]="hass.puntuacionhass" requerid>
+                  </div>
+                  <button class="btn btn-primary">
+                  Actualizar
+                  </button>
+              </form>
+          </div>
+      </div>
+  </div>
+
+  </section>

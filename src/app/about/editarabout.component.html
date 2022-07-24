@@ -1,0 +1,19 @@
+<section class="vh-100" style="background-color: #0E081A">
+
+  <div class="container" *ngIf="about">
+      <div class="row">
+          <div>
+              <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                  <div class="form-group">
+                      <label for="about">About</label>
+                      <input type="text" class="form-control" id="about" name="about" [(ngModel)]="about.about" requerid>
+                  </div>
+                  <button class="btn btn-primary">
+                  Actualizar
+                  </button>
+              </form>
+          </div>
+      </div>
+  </div>
+
+  </section>

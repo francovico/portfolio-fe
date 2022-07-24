@@ -2,20 +2,14 @@
 
     <div class="col-lg-12">
 
-    <h1>Hard and Soft Skills</h1>
+    <h1>Hard and Soft Skills<button type="button" class="btn btn-dark" routerLink="/nuevohass" *ngIf="isLogged"><i class="fa-solid fa-circle-plus"></i> Agregar</button></h1>
 
-    <div class="form-row">
+    <div>
 
-      <h3>CSS</h3>
-
-      <div class="progress-bar bg-primary" style="width:100%;height:20px">100%</div>
-
-      <h3>HTML</h3>
-
-      <div class="progress-bar bg-primary" style="width:100%;height:20px">100%</div>
-
-      <a>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo ab officiis impedit tempore quasi, soluta quo iste voluptates commodi fugiat cum corrupti aliquam, inventore molestias sunt! Cumque iure dolorem voluptatem.</a>
-
+      <div class="col-lg-12" *ngFor="let Hass of hass">
+      {{Hass.nombrehass}}
+      <div class="progress-bar bg-primary" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="height:20px" style="width:{{Hass.puntuacionhass}}%">{{Hass.puntuacionhass}}%</div>
+      <div *ngIf="isLogged"> <button class="btn btn-light" routerLink="/editarhass/{{Hass.id}}"> <i class="fa-solid fa-pen-to-square"></i> Editar</button><button class="btn btn-light" (click)="delete(Hass.id)"> <i class="fa-solid fa-pen-to-square"></i> Borrar</button></div>
     </div>
 
 </div>
