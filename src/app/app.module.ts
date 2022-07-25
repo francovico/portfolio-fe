@@ -23,6 +23,7 @@ import { EditarhassComponent } from './hass/editarhass.component';
 import { EditaraboutComponent } from './about/editarabout.component';
 import { EditareducationComponent } from './education/editareducation.component';
 import { NuevaeducationComponent } from './education/nuevaeducation.component';
+import {ProgressBarModule} from "angular-progress-bar"
 
 @NgModule({
   declarations: [
@@ -51,6 +52,8 @@ import { NuevaeducationComponent } from './education/nuevaeducation.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    ProgressBarModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
