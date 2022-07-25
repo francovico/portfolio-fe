@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -23,7 +22,6 @@ import { EditarhassComponent } from './hass/editarhass.component';
 import { EditaraboutComponent } from './about/editarabout.component';
 import { EditareducationComponent } from './education/editareducation.component';
 import { NuevaeducationComponent } from './education/nuevaeducation.component';
-import {ProgressBarModule} from "angular-progress-bar"
 
 @NgModule({
   declarations: [
@@ -52,8 +50,6 @@ import {ProgressBarModule} from "angular-progress-bar"
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ProgressBarModule
-
   ],
   providers: [],
   bootstrap: [AppComponent]
