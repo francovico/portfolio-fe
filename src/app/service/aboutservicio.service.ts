@@ -7,14 +7,9 @@ import { About } from '../model/about';
   providedIn: 'root'
 })
 export class AboutservicioService {
-
   aboutURL = 'http://localhost:8080/about/';
 
   constructor(private httpClient: HttpClient) { }
-
-  public getAbout(): Observable<About>{
-    return this.httpClient.get<About>(this.aboutURL+'traer/1');
-  }
 
   public lista(): Observable<About[]>{
     return this.httpClient.get<About[]>(this.aboutURL + 'lista');

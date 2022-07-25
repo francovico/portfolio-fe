@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { About } from '../model/about';
 import { persona } from '../model/persona.model';
 import { AboutservicioService } from '../service/aboutservicio.service';
@@ -12,31 +13,26 @@ import { TokenService } from '../service/token.service';
 })
 export class AboutComponent implements OnInit {
   persona: persona = new persona("","","");
-  about: About[] = [];
+  abo : About = null;
 
-  constructor(public personaService: PersonaService, private AboutService: AboutservicioService, private tokenService: TokenService) { }
+  constructor(private personaService: PersonaService, private AboutService: AboutservicioService, private tokenService: TokenService, private activatedRouter: ActivatedRoute,
+    private router: Router) { }
   isLogged = false;
 
   ngOnInit(): void {
-    this.AboutService.getAbout();
     this.personaService.getPersona().subscribe(data => {this.persona = data})
 
-  }
+    //const id = this.activatedRouter.snapshot.params['id'];
+    //this.AboutService.detail('id').subscribe(data => {this.abo = data;})
 
-  //cargarAbout():void{
-  //  this.AboutService.lista().subscribe(data => {this.about = data;})
-  //}
 
-  //delete(id?: number){
-  //  if(id != undefined){
-  //    this.AboutService.delete(id).subscribe(
-  //      data => {
-  //        this.cargarAbout();
-  //      }, err => {
-  //        alert("No se pudo borrar el about");
-  //      }
-  //    )
-  //  }
-  //}
+    //Is logged?
+    if(this.tokenService.getToken()){
+      this.isLogged = true;
+    } else {
+      this.isLogged = false;
+    }
+    }
 
 }
+

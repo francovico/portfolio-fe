@@ -21,6 +21,8 @@ import { EditarexperienciaComponent } from './experience/editarexperiencia.compo
 import { NuevohassComponent } from './hass/nuevohass.component';
 import { EditarhassComponent } from './hass/editarhass.component';
 import { EditaraboutComponent } from './about/editarabout.component';
+import { EditareducationComponent } from './education/editareducation.component';
+import { NuevaeducationComponent } from './education/nuevaeducation.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +43,8 @@ import { EditaraboutComponent } from './about/editarabout.component';
     NuevohassComponent,
     EditarhassComponent,
     EditaraboutComponent,
+    EditareducationComponent,
+    NuevaeducationComponent,
   ],
   imports: [
     BrowserModule,

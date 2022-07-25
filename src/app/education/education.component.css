@@ -1,9 +1,15 @@
 .row{
-    padding: 50px;
+  padding: 50px;
 }
 
 div{
-    background-color: #0E081A;
-    color:lavender;
-    text-align: left;
+  background-color: #0E081A;
+  color:lavender;
+  text-align: left;
+}
+
+.table{
+  background-color: #190F2D;
+  color:lavender;
+  text-align: left;
 }

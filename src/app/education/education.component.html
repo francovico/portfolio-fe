@@ -1,30 +1,25 @@
 <div class="row no-gutters">
 
     <div class="col-lg-12">
-        <h1>Educación</h1>
-        <ul>
-            <li>
-                <h2>Educacion 1</h2>
-                <h3>(years)</h3>
-            </li>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque voluptas nesciunt, asperiores laborum obcaecati aperiam doloribus placeat porro quos omnis ipsa quaerat similique rem esse cum sunt ut reiciendis est?</p>
-        </ul>
+        <h1>Educación<button type="button" class="btn btn-dark" routerLink="/nuevaeducation" *ngIf="isLogged"><i class="fa-solid fa-circle-plus"></i> Agregar</button></h1>
 
-        <ul>
-            <li>
-                <h2>Educacion 2</h2>
-                <h3>(years)</h3>
-            </li>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque voluptas nesciunt, asperiores laborum obcaecati aperiam doloribus placeat porro quos omnis ipsa quaerat similique rem esse cum sunt ut reiciendis est?</p>
-        </ul>
+        <div class="table-responsive">
 
-        <ul>
-            <li>
-                <h2>Educacion 3</h2>
-                <h3>(years)</h3>
-            </li>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque voluptas nesciunt, asperiores laborum obcaecati aperiam doloribus placeat porro quos omnis ipsa quaerat similique rem esse cum sunt ut reiciendis est?</p>
-        </ul>
+          <table class="table table-hover">
+                  <td class="align-middle">Institucion Carrera</td>
+                  <td class="align-middle">Intervalo</td>
+                  <td class="align-middle">Descripcion</td>
+                  <td *ngIf="isLogged" class="align-middle">Acciones</td>
+          <tbody>
+              <tr *ngFor="let Education of edu">
+                  <td class="align-middle">{{Education.institucion}}</td>
+                  <td class="align-middle">{{Education.intervalo}}</td>
+                  <td class="align-middle">{{Education.descripcion}}</td>
+                  <td *ngIf="isLogged"> <button class="btn btn-light" routerLink="/editareducation/{{Education.id}}"> <i class="fa-solid fa-pen-to-square"></i> Editar</button> <button class="btn btn-light" (click)="delete(Education.id)"> <i class="fa-solid fa-pen-to-square"></i> Borrar</button></td>
+                </tr>
+          </tbody>
 
+          </table>
+          </div>
 
-    </div>
+      </div>

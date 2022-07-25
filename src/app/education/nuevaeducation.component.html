@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row">
+      <div>
+          <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+              <div class="form-group">
+                  <label for="institucion">Institución</label>
+                  <input type="text" class="form-control" id="institucion" name="institucion" [(ngModel)]="institucion" requerid>
+              </div>
+              <div class="form-group">
+                  <label for="intervalo">Intervalo</label>
+                  <input type="text" class="form-control" id="intervalo" name="intervalo" [(ngModel)]="intervalo" requerid>
+              </div>
+              <div class="form-group">
+                <label for="descripcion">Descripción</label>
+                <input type="text" class="form-control" id="descripcion" name="descripcion" [(ngModel)]="descripcion" requerid>
+            </div>
+              <button class="btn btn-primary">
+              Agregar
+              </button>
+          </form>
+      </div>
+  </div>
+</div>

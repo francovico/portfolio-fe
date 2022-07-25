@@ -1,11 +1,15 @@
 div{
     background-color: #190F2D;
     color:lavender;
-    padding: 15px;
+    padding: 50px;
     font-size: 20px;
 }
 
 .progress-bar{
   text-align: left;
   padding: 15px;
+}
+
+.col-lg-12{
+  padding: 0px;
 }

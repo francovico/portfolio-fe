@@ -5,7 +5,6 @@
     <h1>Hard and Soft Skills<button type="button" class="btn btn-dark" routerLink="/nuevohass" *ngIf="isLogged"><i class="fa-solid fa-circle-plus"></i> Agregar</button></h1>
 
     <div>
-
       <div class="col-lg-12" *ngFor="let Hass of hass">
       {{Hass.nombrehass}}
       <div class="progress-bar bg-primary" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="height:20px" style="width:{{Hass.puntuacionhass}}%">{{Hass.puntuacionhass}}%</div>
