@@ -10,8 +10,8 @@
 
     <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
         <span>
-            <h3>Acerca de mi</h3><td *ngIf="isLogged"><button class="btn btn-light" routerLink="/editarabout/"> <i class="fa-solid fa-pen-to-square"></i> Editar</button><td>
-            <p>text</p>
+            <h3>Acerca de mi<button class="btn btn-light" routerLink="/editarabout/{{abo.id}}" *ngIf="isLogged"> <i class="fa-solid fa-pen-to-square"></i> Editar</button></h3>
+            <p>{{abo.about}}</p>
         </span>
     </div>
 

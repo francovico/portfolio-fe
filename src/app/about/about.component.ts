@@ -1,3 +1,4 @@
+import { identifierName } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { About } from '../model/about';
@@ -13,7 +14,7 @@ import { TokenService } from '../service/token.service';
 })
 export class AboutComponent implements OnInit {
   persona: persona = new persona("","","");
-  abo : About = null;
+  abo : About;
 
   constructor(private personaService: PersonaService, private AboutService: AboutservicioService, private tokenService: TokenService, private activatedRouter: ActivatedRoute,
     private router: Router) { }
@@ -23,7 +24,9 @@ export class AboutComponent implements OnInit {
     this.personaService.getPersona().subscribe(data => {this.persona = data})
 
     //const id = this.activatedRouter.snapshot.params['id'];
-    //this.AboutService.detail('id').subscribe(data => {this.abo = data;})
+    //valor = this.AboutService.detail(parseInt('id',id))
+
+    this.AboutService.detail(1).subscribe(data => {this.abo = data;})
 
 
     //Is logged?
