@@ -1,12 +1,10 @@
 //Install express server
 const express = require('express');
-const path = require('path');
-
-const app = express();
-
-// Habilitar CORS
 const cors = require('cors');
+const app = express();
 app.use(cors());
+
+const path = require('path');
 
 // Serve only the static files form the dist directory
 app.use(express.static('./dist/portfolio-fe'));
@@ -17,4 +15,3 @@ app.get('/*', (req, res) =>
 
 // Start the app by listening on the default Heroku port
 app.listen(process.env.PORT || 8080);
-//app.listen(portfolio-be-francovico.herokuapp.com)
