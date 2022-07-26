@@ -1,6 +1,6 @@
 {
   "/*": {
-      "target": "http://localhost:80",
+      "target": "portfolio-be-francovico.herokuapp.com",
       "secure": false,
       "logLevel": "debug"
   }
