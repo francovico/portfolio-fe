@@ -8,7 +8,7 @@ import { Hass } from '../model/hass';
 })
 export class HassservicioService {
 
-  hassURL = 'http://localhost:8080/hass/';
+  hassURL = 'http://portfolio-be-francovico.herokuapp.com/hass/';
 
   constructor(private httpClient: HttpClient) { }
 
