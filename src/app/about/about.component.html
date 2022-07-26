@@ -1,17 +1,16 @@
 <div class="row no-gutters">
     <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
         <img src="../../assets/img/foto.jpg" class="rounded-circle img-fluid">
+        <p id="nombre">{{persona.nombre}}&nbsp;{{persona.apellido}}</p>
+        <p><button class="btn btn-light" routerLink="/editarabout/{{abo.id}}" *ngIf="isLogged"> <i class="fa-solid fa-pen-to-square"></i> Editar</button></p>
     </div>
 
-    <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
-        <p id="nombre">{{persona.nombre}}&nbsp;{{persona.apellido}}</p>
-        <p>Full Stack Dev Jr</p>
-        <p>{{abo.job}}</p>
-    </div>
+
 
     <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
         <span>
-            <h3>Acerca de mi<button class="btn btn-light" routerLink="/editarabout/{{abo.id}}" *ngIf="isLogged"> <i class="fa-solid fa-pen-to-square"></i> Editar</button></h3>
+            <h1>Acerca de mi<button class="btn btn-light" routerLink="/editarabout/{{abo.id}}" *ngIf="isLogged"> <i class="fa-solid fa-pen-to-square"></i> Editar</button></h1>
+            <h2>{{abo.job}}</h2>
             <p>{{abo.about}}</p>
         </span>
     </div>
