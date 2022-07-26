@@ -27,14 +27,14 @@
 
                 <button class="btn btn-primary btn-lg btn-block" type="submit">Login</button>
 
+                <div class="my-4" *ngIf="isLogginFail" class="alert alert-danger d-flex align-items-center" role="alert">
+                  <p>Nombre de usuario o contraseña incorrectos.<p>
+                  <p>Por favor intente de nuevo.</p>
+                  </div>
+
             </form>
 
-            <div *ngIf="isLogginFail" class="alert alert-danger d-flex align-items-center" role="alert">
-              <div>
-              <p>Nombre de usuario o contraseña incorrectos.<p>
-              <p>Por favor intente de nuevo.</p>
-              </div>
-            </div>
+
 
               <hr class="my-4">
 
