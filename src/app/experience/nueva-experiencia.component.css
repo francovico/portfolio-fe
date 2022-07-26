@@ -1,0 +1,16 @@
+.row{
+  padding: 50px;
+}
+
+div{
+  background-color: #190F2D;
+  border-color:#2c1a4f;
+  color:lavender;
+  text-align: left;
+}
+
+.table{
+  background-color: #190F2D;
+  color:lavender;
+  text-align: left;
+}

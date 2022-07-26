@@ -10,13 +10,14 @@ import { ExperienciaservicioService } from '../service/experienciaservicio.servi
 })
 export class NuevaExperienciaComponent implements OnInit {
   nombreexperiencia: string = '';
+  intervalo: string = '';
   descripcionexperiencia: string = '';
 
   constructor(private ExperienciaService: ExperienciaservicioService, private router: Router) { }
 
   ngOnInit(): void { }
   onCreate(): void {
-    const expe = new Experiencia(this.nombreexperiencia, this.descripcionexperiencia);
+    const expe = new Experiencia(this.nombreexperiencia, this.intervalo, this.descripcionexperiencia);
     this.ExperienciaService.save(expe).subscribe(
       data=>{
         alert("Experiencia agregada");

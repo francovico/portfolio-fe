@@ -7,12 +7,14 @@
 
         <table class="table table-hover">
           <td class="align-middle">Empresa</td>
+          <td class="align-middle">Intervalo</td>
           <td class="align-middle">Puesto</td>
           <td *ngIf="isLogged" class="align-middle">Acciones</td>
 
         <tbody>
             <tr *ngFor="let Experiencia of expe">
                 <td class="align-middle">{{Experiencia.nombreexperiencia}}</td>
+                <td class="align-middle">{{Experiencia.intervalo}}</td>
                 <td class="align-middle">{{Experiencia.descripcionexperiencia}}</td>
                 <td *ngIf="isLogged"> <button class="btn btn-light" routerLink="/editarexperiencia/{{Experiencia.id}}"> <i class="fa-solid fa-pen-to-square"></i> Editar</button> <button class="btn btn-light" (click)="delete(Experiencia.id)"> <i class="fa-solid fa-pen-to-square"></i> Borrar</button></td>
               </tr>
