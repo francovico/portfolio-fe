@@ -1,7 +1,0 @@
-{
-  "/*": {
-      "target": "portfolio-be-francovico.herokuapp.com",
-      "secure": false,
-      "logLevel": "debug"
-  }
-}
