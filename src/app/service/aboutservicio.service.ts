@@ -7,7 +7,7 @@ import { About } from '../model/about';
   providedIn: 'root'
 })
 export class AboutservicioService {
-  aboutURL = 'http://portfolio-be-francovico.herokuapp.com/about/';
+  aboutURL = 'https://portfolio-be-francovico.herokuapp.com/about/';
 
   constructor(private httpClient: HttpClient) { }
 
