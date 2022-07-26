@@ -4,14 +4,16 @@
       <div class="row">
           <div>
               <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
-                  <div class="form-group">
-                      <label for="about">About</label>
-                      <input type="text" class="form-control" id="about" name="about" [(ngModel)]="about.about" requerid>
-                  </div>
-                  <div class="form-group">
-                    <label for="about">Job</label>
-                    <input type="text" class="form-control" id="job" name="job" [(ngModel)]="about.job" requerid>
+                <div class="form-group">
+                  <label for="about">Job</label>
+                  <input type="text" class="form-control" id="job" name="job" [(ngModel)]="about.job" requerid>
                 </div>
+
+                <div class="form-group">
+                  <label for="about">About</label>
+                  <input type="text" size="50" class="form-control" id="about" name="about" [(ngModel)]="about.about" requerid>
+                </div>
+
                   <button class="btn btn-primary">
                   Actualizar
                   </button>
