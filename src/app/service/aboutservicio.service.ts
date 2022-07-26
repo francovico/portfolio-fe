@@ -31,3 +31,4 @@ export class AboutservicioService {
     return this.httpClient.delete<any>(this.aboutURL + `delete/${id}`);
   }
 }
+

@@ -55,3 +55,4 @@ import { NuevaeducationComponent } from './education/nuevaeducation.component';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
