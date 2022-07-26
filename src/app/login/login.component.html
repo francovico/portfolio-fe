@@ -27,16 +27,18 @@
 
                 <button class="btn btn-primary btn-lg btn-block" type="submit">Login</button>
 
-                <div class="my-4" *ngIf="isLogginFail" class="alert alert-danger d-flex align-items-center" role="alert">
-                  <p>Nombre de usuario o contraseña incorrectos.<p>
-                  <p>Por favor intente de nuevo.</p>
-                  </div>
+
 
             </form>
 
 
 
               <hr class="my-4">
+
+              <div *ngIf="isLogginFail" class="alert alert-danger d-flex align-items-center" role="alert">
+                <p>Nombre de usuario o contraseña incorrectos.<p><br/>
+                <p>Por favor intente de nuevo.</p>
+              </div>
 
               <button class="btn btn-lg btn-block btn-primary"
                 type="submit"><i class="fab fa-google me-2"></i> Ingresar con Google</button>
