@@ -4,6 +4,10 @@ const path = require('path');
 
 const app = express();
 
+// Habilitar CORS
+const cors = require('cors');
+app.use(cors());
+
 // Serve only the static files form the dist directory
 app.use(express.static('./dist/portfolio-fe'));
 
