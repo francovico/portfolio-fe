@@ -28,7 +28,6 @@ export class AboutComponent implements OnInit {
 
     this.AboutService.detail(1).subscribe(data => {this.abo = data;})
 
-
     //Is logged?
     if(this.tokenService.getToken()){
       this.isLogged = true;
