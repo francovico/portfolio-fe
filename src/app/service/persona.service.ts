@@ -42,7 +42,7 @@ export class PersonaService {
 
     console.log(params.toString());
     console.log(this.personaURL + `editar/${id}?`, params)
-    return this.httpClient.put<[]>(this.personaURL + `editar/${id}?`, params); // VER
+    return this.httpClient.put<[any]>(this.personaURL + `editar/${id}?`, params); // VER
   }
 
   public delete(id: number): Observable<any>{
