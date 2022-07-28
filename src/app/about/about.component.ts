@@ -25,7 +25,7 @@ export class AboutComponent implements OnInit {
 
     this.personaService.getPersona().subscribe(data => {this.persona = data}) // Trae el perfil principal.
 
-    const id = this.activatedRouter.snapshot.params['id']; // Lo descomente
+    //const id = this.activatedRouter.snapshot.params['id']; // Lo descomente
 
     this.AboutService.detail(1).subscribe(data => {this.abo = data;})
 
