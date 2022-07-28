@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { persona } from '../model/persona.model';
@@ -29,8 +29,16 @@ export class PersonaService {
     return this.httpClient.post<any>(this.personaURL + 'create', persona);
   }
 
+  //public update(id: number, persona: persona): Observable<any>{
+  //  return this.httpClient.put<any>(this.personaURL + `editar/${id}`, persona); // VER
+  //}
+
   public update(id: number, persona: persona): Observable<any>{
-    return this.httpClient.put<any>(this.personaURL + `editar/${id}`, persona); // VER
+    const params = new HttpParams()
+    .set('nombre', persona.nombre)
+    .set('apellido', persona.apellido)
+    .set('img', persona.img)
+    return this.httpClient.put<persona["id"]>(this.personaURL + 'editar', {params}); // VER
   }
 
   public delete(id: number): Observable<any>{
