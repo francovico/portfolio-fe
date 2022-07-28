@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { About } from '../model/about';
+import { persona } from '../model/persona.model';
 import { AboutservicioService } from '../service/aboutservicio.service';
+import { PersonaService } from '../service/persona.service';
 
 @Component({
   selector: 'app-editarabout',
@@ -10,12 +12,22 @@ import { AboutservicioService } from '../service/aboutservicio.service';
 })
 export class EditaraboutComponent implements OnInit {
   about : About = null;
+  persona : persona = null;
 
-  constructor(private About: AboutservicioService, private activatedRouter: ActivatedRoute,
+  constructor(private About: AboutservicioService, private personaService: PersonaService,private activatedRouter: ActivatedRoute,
     private router: Router) { }
 
   ngOnInit(): void {
     const id = this.activatedRouter.snapshot.params['id'];
+    this.personaService.getPersona().subscribe(
+      data => {
+        this.persona = data;
+      }, err =>{
+        alert("Error al modificar");
+        this.router.navigate(['']);
+      }
+    )
+
     this.About.detail(id).subscribe(
       data => {
         this.about = data;
@@ -28,6 +40,16 @@ export class EditaraboutComponent implements OnInit {
 
   onUpdate(): void{
     const id = this.activatedRouter.snapshot.params['id'];
+    this.personaService.update(id, this.persona).subscribe(
+      data => {
+//        this.persona = data})
+      this.router.navigate(['']);
+      }, err =>{
+        alert("Error al modificar");
+        this.router.navigate(['']);
+      }
+    )
+
     this.About.update(id, this.about).subscribe(
       data => {
         this.router.navigate(['']);

@@ -5,6 +5,21 @@
           <div>
               <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
                 <div class="form-group">
+                  <label for="about">Nombre</label>
+                  <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="persona.nombre" requerid>
+                </div>
+
+                <div class="form-group">
+                  <label for="about">Apellido</label>
+                  <input type="text" class="form-control" id="apellido" name="apellido" [(ngModel)]="persona.apellido" requerid>
+                </div>
+
+                <div class="form-group">
+                  <label for="about">URL Imagen de Perfil</label>
+                  <input type="text" class="form-control" id="img" name="img" [(ngModel)]="persona.img" requerid>
+                </div>
+
+                <div class="form-group">
                   <label for="about">Job</label>
                   <input type="text" class="form-control" id="job" name="job" [(ngModel)]="about.job" requerid>
                 </div>
