@@ -23,10 +23,10 @@ export class AboutComponent implements OnInit {
   ngOnInit(): void {
     this.personaService.getPersona().subscribe(data => {this.persona = data})
 
-    const id = this.activatedRouter.snapshot.params['id'];
+    //const id = this.activatedRouter.snapshot.params['id'];
     //valor = this.AboutService.detail(parseInt('id',id))
 
-    this.AboutService.detail(id).subscribe(data => {this.abo = data;})
+    this.AboutService.detail(1).subscribe(data => {this.abo = data;})
 
     //Is logged?
     if(this.tokenService.getToken()){
