@@ -41,8 +41,8 @@ export class PersonaService {
     .set('img',persona.img)
 
     console.log(params.toString());
-    console.log(this.personaURL + `editar/${id}`, params)
-    return this.httpClient.put<[]>(this.personaURL + `editar/${id}`, params); // VER
+    console.log(this.personaURL + `editar/${id}?`, params)
+    return this.httpClient.put<[]>(this.personaURL + `editar/${id}?`, params); // VER
   }
 
   public delete(id: number): Observable<any>{
