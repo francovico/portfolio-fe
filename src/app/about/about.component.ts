@@ -21,7 +21,7 @@ export class AboutComponent implements OnInit {
   isLogged = false;
 
   ngOnInit(): void {
-    let idperfil = 1; // El Id = 1 se convierte en el perfil. En un multiusuario podria cambiarse esta variable para definir que perfil mostrar.
+    const idperfil = 1; // El Id = 1 se convierte en el perfil. En un multiusuario podria cambiarse esta variable para definir que perfil mostrar.
 
     this.personaService.getPersona().subscribe(data => {this.persona = data})
 
