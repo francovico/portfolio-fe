@@ -30,7 +30,7 @@ export class PersonaService {
   }
 
   public update(id: number, persona: persona): Observable<any>{
-    return this.httpClient.put<any>(this.personaURL + `update/`, persona); // persona.nombre persona.apellido persona.img
+    return this.httpClient.put<any>(this.personaURL + `editar/${id}`, persona); // VER
   }
 
   public delete(id: number): Observable<any>{
