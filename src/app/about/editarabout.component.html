@@ -1,6 +1,6 @@
 <section class="vh-100" style="background-color: #0E081A">
 
-  <div class="container-fluid main-container" *ngIf="about">
+  <div class="container" *ngIf="about">
       <div class="row">
           <div>
               <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
@@ -26,7 +26,7 @@
 
                 <div class="form-group">
                   <label for="about">About</label>
-                  <textarea class="form-control" type="text" rows="25" cols="25" class="form-control" id="about" name="about" [(ngModel)]="about.about" requerid></textarea>
+                  <textarea class="form-control" type="text" rows="10" cols="50" class="form-control" id="about" name="about" [(ngModel)]="about.about" requerid></textarea>
                 </div>
 
                   <button class="btn btn-primary">
