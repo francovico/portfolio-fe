@@ -28,7 +28,7 @@ export class EditaraboutComponent implements OnInit {
       }
     )
 
-    this.About.detail(id).subscribe(
+    this.About.detail(1).subscribe(
       data => {
         this.about = data;
       }, err =>{
@@ -49,7 +49,7 @@ export class EditaraboutComponent implements OnInit {
       }
     )
 
-    this.About.update(id, this.about).subscribe(
+    this.About.update(1, this.about).subscribe(
       data => {
         this.router.navigate(['']);
       }, err =>{
