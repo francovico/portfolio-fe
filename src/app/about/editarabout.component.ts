@@ -49,7 +49,7 @@ export class EditaraboutComponent implements OnInit {
       }
     )
 
-    this.About.update(1, this.about).subscribe(
+    this.About.update(id, this.about).subscribe(
       data => {
         this.router.navigate(['']);
       }, err =>{

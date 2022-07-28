@@ -1,7 +1,7 @@
 export class About {
   id? : number;
   about : string;
-  job: string;
+  job : string;
 
   constructor(about: string, job: string){
       this.about = about;
