@@ -42,7 +42,6 @@ export class EditaraboutComponent implements OnInit {
     const id = this.activatedRouter.snapshot.params['id'];
     this.personaService.update(id, this.persona).subscribe(
       data => {
-//        this.persona = data})
       this.router.navigate(['']);
       }, err =>{
         alert("Error al modificar");
