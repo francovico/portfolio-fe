@@ -34,8 +34,15 @@ export class PersonaService {
   //}
 
   public update(id: number, persona: persona): Observable<any>{
-    const params = new HttpParams({fromObject:{nombre: persona.nombre, apellido: persona.apellido, img: persona.img}})
-    return this.httpClient.put<persona["id"]>(this.personaURL + 'editar/'+id+'?', {params}); // VER
+    const params = new HttpParams()
+    .set('id?',persona.id)
+    .set('nombre',persona.nombre)
+    .set('apellido',persona.apellido)
+    .set('img',persona.img)
+
+    console.log(params.toString());
+    console.log(this.personaURL + 'editar/', params)
+    return this.httpClient.put<[]>(this.personaURL + 'editar/', params); // VER
   }
 
   public delete(id: number): Observable<any>{
