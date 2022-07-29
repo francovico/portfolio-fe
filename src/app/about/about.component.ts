@@ -14,7 +14,6 @@ import { TokenService } from '../service/token.service';
 })
 export class AboutComponent implements OnInit {
   persona: persona = new persona("","","");
-  //persona: persona = null;
   abo: About = new About("","");
 
   constructor(private personaService: PersonaService, private AboutService: AboutservicioService, private tokenService: TokenService, private activatedRouter: ActivatedRoute,
