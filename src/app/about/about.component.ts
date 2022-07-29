@@ -13,7 +13,8 @@ import { TokenService } from '../service/token.service';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent implements OnInit {
-  persona: persona = new persona("","","");
+  //persona: persona = new persona("","","");
+  persona: persona = null;
   abo: About = null;
 
   constructor(private personaService: PersonaService, private AboutService: AboutservicioService, private tokenService: TokenService, private activatedRouter: ActivatedRoute,
@@ -21,13 +22,12 @@ export class AboutComponent implements OnInit {
   isLogged = false;
 
   ngOnInit(): void {
-    ///const id = 1; // El Id = 1 se convierte en el perfil. En un multiusuario podria cambiarse esta variable para definir que perfil mostrar.
+    this.cargarAbout();
+  }
 
-    this.personaService.getPersona().subscribe(data => {this.persona = data}) // Trae el perfil principal.
-
-    //const id = this.activatedRouter.snapshot.params['id']; // Lo descomente
-
-    this.AboutService.detail(1).subscribe(data => {this.abo = data;})
+    cargarAbout(): void{
+      this.personaService.getPersona().subscribe(data => {this.persona = data}) // Trae el perfil principal.
+      this.AboutService.detail(1).subscribe(data => {this.abo = data;}) // Carga los datos del About.
 
     //Is logged?
     if(this.tokenService.getToken()){
