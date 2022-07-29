@@ -26,8 +26,8 @@ export class AboutComponent implements OnInit {
   }
 
     cargarAbout(): void{
-      this.personaService.getPersona().subscribe(data => {this.persona = data}) // Trae el perfil principal.
-      this.AboutService.detail(1).subscribe(data => {this.abo = data;}) // Carga los datos del About.
+      this.personaService.getPersona().subscribe(data => {this.persona = data}); // Trae el perfil principal.
+      this.AboutService.detail(1).subscribe(data => {this.abo = data}); // Carga los datos del About.
 
     //Is logged?
     if(this.tokenService.getToken()){
