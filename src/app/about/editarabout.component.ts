@@ -59,7 +59,4 @@ export class EditaraboutComponent implements OnInit {
     )
   }
 
-  cancelEdit(){
-    this.router.navigate(['']);
-  }
 }
