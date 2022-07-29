@@ -16,7 +16,7 @@ export class AboutservicioService {
   }
 
   public detail(id: number): Observable<About>{
-    return this.httpClient.get<any>(this.aboutURL + `detail/${id}`);
+    return this.httpClient.get<About>(this.aboutURL + `detail/${id}`);
   }
 
   public save(about: About): Observable<any>{
