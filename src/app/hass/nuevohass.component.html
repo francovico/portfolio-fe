@@ -5,11 +5,11 @@
       <div>
           <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
               <div class="form-group">
-                  <label for="nombrehass">Nombre</label>
+                  <label for="nombrehass">Hard and Soft Skill</label>
                   <input type="text" class="form-control" id="nombrehass" name="nombrehass" [(ngModel)]="nombrehass" requerid>
               </div>
               <div class="form-group">
-                  <label for="puntuacionhass">Puntuacion</label>
+                  <label for="puntuacionhass">Puntuación (0-100%)</label>
                   <input type="text" class="form-control" id="puntuacionhass" name="puntuacionhass" [(ngModel)]="puntuacionhass" requerid>
               </div>
               <button class="btn btn-primary">
