@@ -13,8 +13,8 @@ import { TokenService } from '../service/token.service';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent implements OnInit {
-  //persona: persona = new persona("","","");
-  persona: persona = null;
+  persona: persona = new persona("","","","");
+  //persona: persona = null;
   abo: About = null;
 
   constructor(private personaService: PersonaService, private AboutService: AboutservicioService, private tokenService: TokenService, private activatedRouter: ActivatedRoute,
