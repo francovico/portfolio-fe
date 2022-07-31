@@ -6,10 +6,12 @@
         <div class="table-responsive">
 
         <table class="table">
-          <td class="align-middle">Empresa</td>
-          <td class="align-middle">Intervalo</td>
-          <td class="align-middle">Puesto</td>
-          <td *ngIf="isLogged" class="align-middle">Acciones</td>
+          <thead>
+            <th class="align-middle">Empresa</th>
+            <th class="align-middle">Intervalo</th>
+            <th class="align-middle">Puesto</th>
+            <th *ngIf="isLogged" class="align-middle">Acciones</th>
+          </thead>
 
         <tbody>
             <tr *ngFor="let Experiencia of expe">
